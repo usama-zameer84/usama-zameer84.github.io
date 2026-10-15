@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamza Badar — Portfolio</title>
+  <title>Usama Zameer — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -16,7 +16,6 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    /* Animated gradient background */
     .bg-mesh {
       position: fixed; inset: 0; z-index: -2;
       background:
@@ -30,7 +29,6 @@
       50% { transform: scale(1.1) translate(-2%, -1%); }
       100% { transform: scale(1) translate(1%, 2%); }
     }
-    /* Floating orbs */
     .orb {
       position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.35;
       animation: orbFloat 15s ease-in-out infinite alternate;
@@ -42,7 +40,6 @@
       0% { transform: translate(0,0) scale(1); }
       100% { transform: translate(30px, -40px) scale(1.08); }
     }
-    /* Liquid glass card */
     .glass {
       background: rgba(255,255,255,0.03);
       backdrop-filter: blur(24px) saturate(1.4);
@@ -70,7 +67,6 @@
         inset 0 1px 0 rgba(255,255,255,0.1);
       border-color: rgba(255,255,255,0.14);
     }
-    /* Nav */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 1rem 2rem;
@@ -91,7 +87,6 @@
       transition: width 0.2s;
     }
     nav a:hover::after { width: 100%; }
-    /* Sections */
     section { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem 2rem; }
     .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 5rem; }
     .hero-inner { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
@@ -130,7 +125,6 @@
     }
     .btn:hover { background: rgba(99,102,241,0.3); color: #fff; transform: translateY(-2px); }
     .btn svg { width: 18px; height: 18px; }
-    /* Section titles */
     h2 {
       font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem;
       display: flex; align-items: center; gap: 0.75rem;
@@ -139,7 +133,6 @@
       width: 8px; height: 8px; border-radius: 50%;
       background: linear-gradient(135deg, #6366f1, #ec4899);
     }
-    /* Cards grid */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .card { padding: 1.75rem; }
     .card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem; color: #fff; }
@@ -151,7 +144,6 @@
       content: ''; position: absolute; left: 0; top: 0.5rem; width: 6px; height: 6px;
       border-radius: 50%; background: linear-gradient(135deg, #6366f1, #ec4899);
     }
-    /* Skills */
     .skill-tag {
       display: inline-block; padding: 0.45rem 1rem; border-radius: 999px;
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
@@ -163,7 +155,6 @@
     }
     .skills-group { margin-bottom: 1.5rem; }
     .skills-group h4 { font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
-    /* Contact */
     .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
     .contact-links a {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -173,10 +164,8 @@
       transition: all 0.2s;
     }
     .contact-links a:hover { background: rgba(255,255,255,0.07); color: #fff; transform: translateY(-2px); }
-    /* Scroll reveal */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #0a0a0f; }
     ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
@@ -201,21 +190,21 @@
   <section class="hero" id="about">
     <div class="hero-inner">
       <div>
-        <h1>Hamza Badar</h1>
-        <p class="subtitle">M.Sc. Computer Science · Data Analyst · Full-Stack Developer</p>
+        <h1>Usama Zameer</h1>
+        <p class="subtitle">M.Sc. Bioinformatics · Backend & AI Engineer · Bioinformatics Pipelines</p>
         <p style="color: #64748b; margin-top: 1.25rem; max-width: 520px; font-size: 0.95rem;">
-          Master's student at Uni Bonn. Building data dashboards, visualizations, and web systems. Agile product dev background. B2B focused.
+          Master's student at Universität des Saarlandes. Building document-processing backends at scale, genomic data pipelines, and LLM-powered automation. Strong in Python, Azure, and bioinformatics tooling.
         </p>
-        <a class="btn" href="https://github.com/hamzabdr36" target="_blank">
+        <a class="btn" href="https://github.com/usama-zameer84" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
         </a>
-        <a class="btn" href="https://linkedin.com/in/hamza-badar36" target="_blank" style="margin-left: 0.75rem;">
+        <a class="btn" href="https://linkedin.com/in/usama-zameer" target="_blank" style="margin-left: 0.75rem;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
       </div>
-      <div class="hero-glass">HB</div>
+      <div class="hero-glass">UZ</div>
     </div>
   </section>
 
@@ -223,22 +212,23 @@
     <h2 class="reveal"><span class="dot"></span>Experience</h2>
     <div class="grid">
       <div class="glass card reveal">
-        <h3>Working Student Business Analyst</h3>
-        <p class="meta">DHL Express (GHO), Bonn · Aug 2025 – Present</p>
+        <h3>Backend & AI Engineer</h3>
+        <p class="meta">CAAPS / AI & Cloud Solutions, Saarbrücken · Sep 2024 – Feb 2026</p>
         <ul>
-          <li>Shipment & customs data analysis for compliance risk detection</li>
-          <li>Power BI dashboards for customs KPI monitoring</li>
-          <li>Data cleaning & reconciliation across multiple systems</li>
-          <li>Audit support: internal & external customs documentation</li>
+          <li>Built document-processing backend: 5,000+ docs/hour via FastAPI, Celery, Redis</li>
+          <li>Integrated Azure Document Intelligence, Gemini, GPT for PDF-to-markdown and structured extraction</li>
+          <li>Designed JSON schemas and prompt strategies (few-shot, chain-of-thought) for accuracy</li>
+          <li>Provisioned Azure infrastructure with Terraform; containerized with Docker</li>
+          <li>CI/CD pipelines with GitHub Actions: testing, Docker builds, production deploys</li>
         </ul>
       </div>
       <div class="glass card reveal">
-        <h3>Student Assistant System Administration</h3>
-        <p class="meta">Research Institute for Discrete Mathematics, Bonn · Jan 2024 – May 2025</p>
+        <h3>Bioinformatics Research Intern</h3>
+        <p class="meta">Functional Informatics Lab, Quaid-i-Azam University, Islamabad · Dec 2021 – Jan 2023</p>
         <ul>
-          <li>Linux server maintenance, security hardening, operational optimization</li>
-          <li>Data workflow & analytics tool support for research teams</li>
-          <li>User management, backups, system updates</li>
+          <li>Automated Python pipelines for micro-RNA therapeutics research</li>
+          <li>Computational drug discovery: virtual screening and molecular dynamics simulations</li>
+          <li>Data retrieval optimization from biological sequence databases</li>
         </ul>
       </div>
     </div>
@@ -248,38 +238,52 @@
     <h2 class="reveal"><span class="dot"></span>Projects</h2>
     <div class="grid">
       <div class="glass card reveal">
-        <h3>Interactive Mice Protein Expression Analysis</h3>
-        <p class="meta">Aug 2023 – Sep 2023</p>
+        <h3>VCF-to-FHIR Genomics ETL</h3>
+        <p class="meta">n8n · Python · ETL · FHIR · 2026</p>
         <ul>
-          <li>EDA & interactive dashboard with Python, Dash, Plotly</li>
-          <li>Parallel coordinates, PCA, ISOMAP, t-SNE dimensionality reduction</li>
+          <li>End-to-end n8n pipeline transforming genomic VCF data into FHIR Genomics resources</li>
+          <li>Automated validation and mapping for clinical interoperability</li>
         </ul>
       </div>
       <div class="glass card reveal">
-        <h3>Visual Data Analysis</h3>
-        <p class="meta">Apr 2023 – Aug 2023</p>
+        <h3>FASTA Drug Repurposing Pipeline</h3>
+        <p class="meta">n8n · Bioinformatics APIs · Python · 2026</p>
         <ul>
-          <li>Multidimensional & geospatial data visualization</li>
-          <li>3D volume rendering (CT/MRI) with ParaView & VTK</li>
-          <li>Vector field & CFD visualization</li>
+          <li>n8n workflow orchestrating NCBI BLAST, g:Profiler, DGIdb APIs</li>
+          <li>Converts raw FASTA sequences into ranked drug repurposing candidates</li>
         </ul>
       </div>
       <div class="glass card reveal">
-        <h3>Sales Data Analysis Dashboard</h3>
-        <p class="meta">Apr 2023 – Aug 2023</p>
+        <h3>PPI Prediction Pipeline</h3>
+        <p class="meta">Deep Learning · Graph Neural Networks · Python · 2026</p>
         <ul>
-          <li>12-month retail sales trend analysis</li>
-          <li>Excel Pivot Tables, dynamic charts, conditional formatting</li>
-          <li>Revenue, units sold, AOV summaries by region & season</li>
+          <li>Production-grade academic benchmarking pipeline for protein-protein interaction prediction</li>
+          <li>Graph Neural Networks evaluated against published baselines</li>
         </ul>
       </div>
       <div class="glass card reveal">
-        <h3>University Notes Management System</h3>
-        <p class="meta">Jan 2022 – Apr 2022</p>
+        <h3>Local LLM Dev Stack</h3>
+        <p class="meta">llama.cpp · mlx-server · LangChain · n8n · Python · 2025</p>
         <ul>
-          <li>Web platform for students to share academic notes</li>
-          <li>Custom Django admin for note management</li>
-          <li>Python, SQLite, HTML, CSS, Bootstrap</li>
+          <li>Apple Silicon local inference stack: llama.cpp, mlx-server running Gemma 4</li>
+          <li>LangChain Python service for programmatic access</li>
+          <li>Self-hosted n8n integrated with local LLM for private AI workflow automation</li>
+        </ul>
+      </div>
+      <div class="glass card reveal">
+        <h3>Computational Genomics — Breast Cancer</h3>
+        <p class="meta">R · Bioconductor · 2021</p>
+        <ul>
+          <li>Genomics data preprocessing, normalization, differential expression analysis</li>
+          <li>Pathway analysis for therapeutic target identification</li>
+        </ul>
+      </div>
+      <div class="glass card reveal">
+        <h3>Phosphomethylpyrimidine Synthase Modelling</h3>
+        <p class="meta">Modeller · Swiss-Model · 2020</p>
+        <ul>
+          <li>Homology modeling and molecular docking for Thiamine Metabolism study</li>
+          <li>Protein structure prediction and ligand-receptor interaction analysis</li>
         </ul>
       </div>
     </div>
@@ -289,63 +293,63 @@
     <h2 class="reveal"><span class="dot"></span>Skills</h2>
     <div class="glass card reveal">
       <div class="skills-group">
-        <h4>Programming</h4>
-        <span class="skill-tag">C#</span><span class="skill-tag">C++</span><span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">PHP</span><span class="skill-tag">ASP.NET</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">Bootstrap</span>
+        <h4>Languages & Scripting</h4>
+        <span class="skill-tag">Python</span><span class="skill-tag">C++</span><span class="skill-tag">R</span><span class="skill-tag">Perl</span><span class="skill-tag">Bash/Shell</span><span class="skill-tag">SQL</span>
       </div>
       <div class="skills-group">
-        <h4>Data & Viz</h4>
-        <span class="skill-tag">SQL</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">Seaborn</span><span class="skill-tag">VTK</span><span class="skill-tag">ParaView</span><span class="skill-tag">Power BI</span>
+        <h4>Backend & Cloud</h4>
+        <span class="skill-tag">FastAPI</span><span class="skill-tag">Celery</span><span class="skill-tag">Redis</span><span class="skill-tag">Azure Cloud</span><span class="skill-tag">Azure Document Intelligence</span><span class="skill-tag">Docker</span><span class="skill-tag">Terraform</span><span class="skill-tag">REST APIs</span><span class="skill-tag">n8n</span>
       </div>
       <div class="skills-group">
-        <h4>Tools & Cloud</h4>
-        <span class="skill-tag">Linux</span><span class="skill-tag">AWS Cloud Practitioner</span><span class="skill-tag">SharePoint</span><span class="skill-tag">Salesforce</span><span class="skill-tag">MailChimp</span><span class="skill-tag">Figma</span><span class="skill-tag">Adobe Illustrator</span>
+        <h4>DevOps & CI/CD</h4>
+        <span class="skill-tag">GitHub Actions</span><span class="skill-tag">CI/CD Pipelines</span><span class="skill-tag">Infrastructure as Code</span><span class="skill-tag">Containerization</span><span class="skill-tag">Git</span>
       </div>
       <div class="skills-group">
-        <h4>Methodologies</h4>
-        <span class="skill-tag">Agile</span><span class="skill-tag">Scrum</span>
+        <h4>AI & Automation</h4>
+        <span class="skill-tag">LangChain</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">GenAI Integration</span><span class="skill-tag">Gemini</span><span class="skill-tag">GPT</span>
+      </div>
+      <div class="skills-group">
+        <h4>Bioinformatics</h4>
+        <span class="skill-tag">GROMACS</span><span class="skill-tag">Modeller</span><span class="skill-tag">Maestro Suite</span><span class="skill-tag">VMD</span><span class="skill-tag">PyMOL</span><span class="skill-tag">AutoDock Vina</span><span class="skill-tag">Bioconductor</span>
       </div>
     </div>
 
     <h2 class="reveal" style="margin-top: 3rem;"><span class="dot"></span>Education</h2>
     <div class="grid">
       <div class="glass card reveal">
-        <h3>M.Sc. Computer Science</h3>
-        <p class="meta">Rheinische Friedrich-Wilhelms-Universität Bonn · Apr 2024 – Present</p>
+        <h3>M.Sc. Bioinformatics</h3>
+        <p class="meta">Universität des Saarlandes, Saarbrücken · Apr 2023 – Present</p>
       </div>
       <div class="glass card reveal">
-        <h3>B.Sc. Computer Science</h3>
-        <p class="meta">University of the Punjab · Sep 2018 – Jul 2022</p>
+        <h3>B.Sc. Bioinformatics</h3>
+        <p class="meta">Quaid-i-Azam University, Islamabad · Nov 2017 – Aug 2021</p>
       </div>
     </div>
 
-    <h2 class="reveal" style="margin-top: 3rem;"><span class="dot"></span>Certificates</h2>
+    <h2 class="reveal" style="margin-top: 3rem;"><span class="dot"></span>Languages</h2>
     <div class="glass card reveal">
-      <ul>
-        <li>Fundamentals of Red Hat Enterprise Linux</li>
-        <li>Data Manipulation in Python: Master Python, NumPy and Pandas</li>
-        <li>AWS Cloud Practitioner</li>
-      </ul>
+      <p style="color: #94a3b8;">Urdu: Native · English: Fluent (C2) · German: Elementary (A2, actively learning)</p>
     </div>
   </section>
 
   <section id="contact">
     <h2 class="reveal"><span class="dot"></span>Contact</h2>
     <div class="glass card reveal">
-      <p style="color: #94a3b8; margin-bottom: 1rem;">Open to product team roles in B2B environments. Based in Bonn, Germany.</p>
+      <p style="color: #94a3b8; margin-bottom: 1rem;">Based in Saarbrücken, Germany. Open to backend, AI, and bioinformatics engineering roles.</p>
       <div class="contact-links">
-        <a href="mailto:hamzabdr36@gmail.com">
+        <a href="mailto:usama_zameer@icloud.com">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          hamzabdr36@gmail.com
+          usama_zameer@icloud.com
         </a>
-        <a href="tel:015785096237">
+        <a href="tel:+4917663635811">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          0157 8509 6237
+          +49 176 63635811
         </a>
-        <a href="https://linkedin.com/in/hamza-badar36" target="_blank">
+        <a href="https://linkedin.com/in/usama-zameer" target="_blank">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
-        <a href="https://github.com/hamzabdr36" target="_blank">
+        <a href="https://github.com/usama-zameer84" target="_blank">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           GitHub
         </a>
@@ -354,7 +358,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Hamza Badar · Built with liquid glass</p>
+    <p>© 2025 Usama Zameer · Built with liquid glass</p>
   </footer>
 
   <script>
@@ -368,7 +372,6 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Subtle mouse parallax on orbs
     document.addEventListener('mousemove', (e) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 20;
       const y = (e.clientY / window.innerHeight - 0.5) * 20;

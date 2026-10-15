@@ -18,34 +18,33 @@
       min-height: 100vh;
     }
 
-    /* Soft pastel mesh background for light mode */
+    /* Soft pastel mesh background — slow subtle drift */
     .bg-mesh {
       position: fixed; inset: 0; z-index: -3;
       background:
-        radial-gradient(ellipse at 15% 25%, rgba(99,102,241,0.12) 0%, transparent 55%),
-        radial-gradient(ellipse at 85% 75%, rgba(236,72,153,0.10) 0%, transparent 55%),
-        radial-gradient(ellipse at 50% 50%, rgba(56,189,248,0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 20%, rgba(139,92,246,0.09) 0%, transparent 50%);
-      animation: meshMove 25s ease-in-out infinite alternate;
+        radial-gradient(ellipse at 15% 25%, rgba(99,102,241,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 75%, rgba(236,72,153,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 50%, rgba(56,189,248,0.06) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 20%, rgba(139,92,246,0.07) 0%, transparent 55%);
+      animation: meshMove 40s ease-in-out infinite alternate;
     }
     @keyframes meshMove {
       0% { transform: scale(1) translate(0,0); }
-      50% { transform: scale(1.15) translate(-3%, -2%); }
-      100% { transform: scale(1) translate(2%, 1%); }
+      100% { transform: scale(1.05) translate(1%, -1%); }
     }
 
-    /* Soft floating orbs */
+    /* Soft floating orbs — very slow gentle drift */
     .orb {
-      position: fixed; border-radius: 50%; filter: blur(120px); z-index: -2; opacity: 0.35;
-      animation: orbFloat 18s ease-in-out infinite alternate;
+      position: fixed; border-radius: 50%; filter: blur(140px); z-index: -2; opacity: 0.25;
+      animation: orbFloat 30s ease-in-out infinite alternate;
       pointer-events: none;
     }
-    .orb-1 { width: 600px; height: 600px; background: rgba(99,102,241,0.35); top: -15%; left: -10%; animation-delay: 0s; }
-    .orb-2 { width: 500px; height: 500px; background: rgba(236,72,153,0.28); bottom: -10%; right: -8%; animation-delay: -6s; }
-    .orb-3 { width: 350px; height: 350px; background: rgba(56,189,248,0.25); top: 45%; left: 55%; animation-delay: -12s; }
+    .orb-1 { width: 600px; height: 600px; background: rgba(99,102,241,0.30); top: -15%; left: -10%; animation-delay: 0s; }
+    .orb-2 { width: 500px; height: 500px; background: rgba(236,72,153,0.22); bottom: -10%; right: -8%; animation-delay: -10s; }
+    .orb-3 { width: 350px; height: 350px; background: rgba(56,189,248,0.20); top: 45%; left: 55%; animation-delay: -20s; }
     @keyframes orbFloat {
       0% { transform: translate(0,0) scale(1); }
-      100% { transform: translate(40px, -50px) scale(1.1); }
+      100% { transform: translate(15px, -20px) scale(1.03); }
     }
 
     /* ===== LIQUID GLASS SYSTEM (Light Mode) ===== */
@@ -106,20 +105,21 @@
       position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 100;
       padding: 0.55rem 0.8rem;
       display: flex; justify-content: center; align-items: center; gap: 0.3rem;
-      background: rgba(255,255,255,0.35);
-      backdrop-filter: blur(32px) saturate(1.6);
-      -webkit-backdrop-filter: blur(32px) saturate(1.6);
-      border: 1px solid rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(40px) saturate(1.5);
+      -webkit-backdrop-filter: blur(40px) saturate(1.5);
+      border: 1px solid rgba(255,255,255,0.7);
       border-radius: 999px;
       box-shadow:
-        0 8px 32px rgba(0,0,0,0.08),
-        inset 0 1px 2px rgba(255,255,255,0.7);
+        0 8px 32px rgba(0,0,0,0.06),
+        inset 0 1px 1px rgba(255,255,255,0.9);
       transition: box-shadow 0.3s ease, background 0.3s ease;
     }
+    /* Subtle top-edge highlight only — no heavy white overlay */
     nav::before {
       content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, transparent 100%);
+      position: absolute; top: 0; left: 8px; right: 8px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
       pointer-events: none; border-radius: 999px;
     }
     nav a {
@@ -513,12 +513,12 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    /* Mouse-reactive orb parallax */
+    /* Gentle mouse-reactive orb parallax */
     document.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 25;
-      const y = (e.clientY / window.innerHeight - 0.5) * 25;
+      const x = (e.clientX / window.innerWidth - 0.5) * 8;
+      const y = (e.clientY / window.innerHeight - 0.5) * 8;
       document.querySelectorAll('.orb').forEach((orb, i) => {
-        const factor = (i + 1) * 0.6;
+        const factor = (i + 1) * 0.3;
         orb.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
       });
     });
